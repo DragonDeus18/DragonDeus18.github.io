@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    
+
+    <head>
+        
+        <script>
+        
+        function addTwo(){
+          var x = document.getElementById("txt1").value;
+          var y = document.getElementById("txt2").value;
+            
+          var result = x + y;
+          document.getElementById("result").value = result;
+        }
+        
+        </script>
+    
+    </head>
+    
+
+
+    <body>
+    
+    
+        <h1> hello </h1>
+         
+          <input type="text" id="txt1"/>
+    
+          <button onclick="addTwo()"> + </button>
+          <button onclick=""> - </button>
+          <button onclick=""> * </button>
+          <button onclick=""> / </button>
+    
+          <input type="text" id="txt2"/>
+        
+          <p> Resultatet er: </p>
+          <input type="text" id="result"/>
+    
+
+    </body>
+    
+</html>
