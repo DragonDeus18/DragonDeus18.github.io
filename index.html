@@ -7,14 +7,38 @@
         
         <script>
         
-        function addTwo(){
-          var x = document.getElementById("txt1").value;
-          var y = document.getElementById("txt2").value;
+        function performOperation(operator){
+          var x = parseInt(document.getElementById("txt1").value);
+          var y = parseInt(document.getElementById("txt2").value);
             
-          var result = x + y;
+          var result;
+          switch(operator) {
+              case "+":
+                    result = x + y;
+                  break;
+              case "-":
+                  result = x - y;
+                  break;
+              case "*":
+                    result = x * y;
+                  break;
+              case "/":
+                  if (y == 0)
+                    result = "De fuck";
+                  else
+                    result = x / y;
+                  break;
+              default:
+                    result = 1;
+                  break;
+          }
+          
+            
           document.getElementById("result").value = result;
         }
+            
         
+    
         </script>
     
     </head>
@@ -24,19 +48,19 @@
     <body>
     
     
-        <h1> hello </h1>
+        <h1> Min lommeregner </h1>
          
           <input type="text" id="txt1"/>
     
-          <button onclick="addTwo()"> + </button>
-          <button onclick=""> - </button>
-          <button onclick=""> * </button>
-          <button onclick=""> / </button>
+          <button onclick="performOperation('+')"> + </button>
+          <button onclick="performOperation('-')"> - </button> 
+          <button onclick="performOperation('*')"> * </button>
+          <button onclick="performOperation('/')"> / </button>
     
           <input type="text" id="txt2"/>
         
           <p> Resultatet er: </p>
-          <input type="text" id="result"/>
+          <input type="text" id="result"/ disabled>
     
 
     </body>
